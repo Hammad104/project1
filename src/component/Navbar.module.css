@@ -1,0 +1,19 @@
+.main_nav {
+  background-color: rgb(59, 163, 228);
+  height: 45px;
+}
+
+.navul {
+  display: flex;
+  list-style-type: none;
+  justify-content: flex-end;
+}
+.list {
+  margin-right: 80px;
+  margin-top: 20px;
+  list-style-type: none;
+}
+.link {
+  color: white;
+  text-decoration: none;
+}
