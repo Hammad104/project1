@@ -1,5 +1,6 @@
 import React from "react";
 import Style from "./Signupform.module.css";
+import { Button } from "@material-ui/core";
 
 class Signup extends React.Component {
   state = {
@@ -77,7 +78,9 @@ class Signup extends React.Component {
           </tr>
           <br />
 
-          <input type="submit" value="Sign Up" className={Style.btn} />
+          <Button variant="contained" color="secondary" className={Style.btn}>
+            Signup
+          </Button>
         </table>
       </div>
     );

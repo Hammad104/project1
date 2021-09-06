@@ -1,8 +1,14 @@
 import React from "react";
 import Style from "./Login.module.css";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
+import { Button } from "@material-ui/core";
 
 function Login() {
+  let inputRef = useRef(null);
+
+  useEffect(() => {
+    inputRef.current.focus();
+  });
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
@@ -18,6 +24,7 @@ function Login() {
 
           <td>
             <input
+              ref={inputRef}
               type="text"
               name="email"
               value={email}
@@ -43,9 +50,9 @@ function Login() {
         </tr>
         <br />
 
-        <button type="submit" className={Style.btn}>
-          Login{" "}
-        </button>
+        <Button variant="contained" color="secondary" href="#contained-buttons">
+          Login
+        </Button>
       </table>
     </div>
   );
